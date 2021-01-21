@@ -1,8 +1,11 @@
-$accent: orange 
-$fontsize: 16px
-$textcolor: #333
-$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif
-$roboto: Roboto, sans-serif
+$black: #232323
+$yellow: #ffbe00
+$green: #517300
+$grey: #787878
+$red: #f92424
+
+$fontsize: 14px
+$textcolor: $black
 
 $grid-gutter-width: 20px
 $gutter: $grid-gutter-width
@@ -15,7 +18,7 @@ $gutter: $grid-gutter-width
     src: local($fname), url($furl) format('woff2')
 
 @include font('Ubuntu', normal, 400, '../fonts/Ubuntu-Regular.woff2')
-@include font('Roboto', italic, 400, '../fonts/Ubuntu-Bold.woff2')
+@include font('Ubuntu', normal, 600, '../fonts/Ubuntu-Bold.woff2')
 
 @import '../libs/bootstrap-grid/bootstrap-grid.css'
 
@@ -23,7 +26,7 @@ $gutter: $grid-gutter-width
   color: #666
 
 ::selection
-  background-color: $accent
+  background-color: $yellow
   color: #fff
 
 input, textarea
@@ -34,10 +37,18 @@ input, textarea
     border-color: green
 
 body
-  font-family: $roboto
+  font-family: 'Ubuntu'
   font-size: $fontsize
   min-width: 320px
   position: relative
   line-height: 1.65
   overflow-x: hidden
   color: $textcolor
+
+ul
+  padding: 0
+  margin: 0
+  list-style: none
+
+p
+  margin: 0
