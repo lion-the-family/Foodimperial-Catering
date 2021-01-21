@@ -1,0 +1,16 @@
+.site-menu
+  min-width: 400px
+  text-transform: uppercase
+  font-weight: 500
+
+.site-menu-list
+  display: grid
+  grid-template-columns: repeat(4, auto)
+  grid-template-rows: repeat(2, 25px)
+
+.site-menu-item
+  font-size: 14px
+
+@for $i from 1 through 4
+  .site-menu-item:nth-child(#{$i})
+    padding-left: 20px

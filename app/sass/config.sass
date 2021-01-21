@@ -10,6 +10,8 @@ $textcolor: $black
 $grid-gutter-width: 20px
 $gutter: $grid-gutter-width
 
+$common-transition: all .25s ease
+
 @mixin font($fname, $fstyle, $fweight, $furl)
   @font-face
     font-family: $fname
@@ -18,6 +20,7 @@ $gutter: $grid-gutter-width
     src: local($fname), url($furl) format('woff2')
 
 @include font('Ubuntu', normal, 400, '../fonts/Ubuntu-Regular.woff2')
+@include font('Ubuntu', normal, 500, '../fonts/Ubuntu-Medium.woff2')
 @include font('Ubuntu', normal, 600, '../fonts/Ubuntu-Bold.woff2')
 
 @import '../libs/bootstrap/bootstrap-grid.css'
@@ -50,5 +53,12 @@ ul
   margin: 0
   list-style: none
 
-p
+p, dl, dt, dd
   margin: 0
+
+a
+  color: inherit
+  text-decoration: none
+
+  &:active
+    color: $yellow

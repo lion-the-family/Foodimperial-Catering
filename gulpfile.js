@@ -32,7 +32,7 @@ let styleModules = [
   'app/sass/config.sass',
   'app/sass/common/*.sass',
   'app/sass/elements/*.sass',
-  'app/sass/structure-sections/**/*.sass'
+  'app/sass/structure-sections/*.sass'
 ];
 
 let modifyCssUrlsOptions = {

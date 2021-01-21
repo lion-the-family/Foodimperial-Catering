@@ -14,34 +14,38 @@
     <div class="container">
       <div class="row no-gutters">
 
-        <div class="col-md-2">
-          <img class="header-logo" src="./img/food-imperial-logo.png" alt="Логотип Food Imperial" width="159"
+        <div class="header-logo-wrapper col-md-2 ">
+          <img class="food-imperial-logo" src="./img/food-imperial-logo.png" alt="Логотип Food Imperial" width="159"
             height="57">
         </div>
 
-        <dl class="header-contacts col-md-2">
-          <dt class="header-contact-title">обеды</dt>
-          <dd class="header-contact-number">099 5000 307</dd>
-          <dt class="header-contact-title">кейтеринг</dt>
-          <dd class="header-contact-number">097 5000 307</dd>
-          <dt class="header-contact-title">фуршет box</dt>
-          <dd class="header-contact-number">073 5000 301</dd>
-        </dl>
+        <div class="header-contacts-wrapper col-md-3">
+          <dl class="contacts-catalog">
+            <dt class="catalog-contact-number"><a href="tel:099 5000 307" class="number-link">099 5000 307</a></dt>
+            <dd class="catalog-contact-service">обеды</dd>
+            <dt class="catalog-contact-number"><a href="tel:099 5000 307" class="number-link">097 5000 307</a></dt>
+            <dd class="catalog-contact-service">кейтеринг</dd>
+            <dt class="catalog-contact-number"><a href="tel:099 5000 307" class="number-link">073 5000 301</a></dt>
+            <dd class="catalog-contact-service">фуршет box</dd>
+          </dl>
+        </div>
 
-        <nav class="header-menu col-md-4 offset-md-1">
-          <ul class="header-menu-list">
-            <li class="header-menu-item">главная</li>
-            <li class="header-menu-item">доставка</li>
-            <li class="header-menu-item">меню</li>
-            <li class="header-menu-item">контакты</li>
-            <li class="header-menu-item">обеды</li>
-            <li class="header-menu-item">кейтеринг</li>
-            <li class="header-menu-item">фуршет</li>
-            <li class="header-menu-item">торты на заказ</li>
-          </ul>
-        </nav>
+        <div class="header-menu-wrapper col-md-5">
+          <nav class="site-menu">
+            <ul class="site-menu-list">
+              <li class="site-menu-item"><a href="#" class="site-menu-link">главная</a></li>
+              <li class="site-menu-item"><a href="#" class="site-menu-link">доставка</a></li>
+              <li class="site-menu-item"><a href="#" class="site-menu-link">меню</a></li>
+              <li class="site-menu-item"><a href="#" class="site-menu-link">контакты</a></li>
+              <li class="site-menu-item"><a href="#" class="site-menu-link">обеды</a></li>
+              <li class="site-menu-item"><a href="#" class="site-menu-link">кейтеринг</a></li>
+              <li class="site-menu-item"><a href="#" class="site-menu-link">фуршет</a></li>
+              <li class="site-menu-item"><a href="#" class="site-menu-link">торты на заказ</a></li>
+            </ul>
+          </nav>
+        </div>
 
-        <div class="header-user-control col-md-2 offset-md-1">
+        <div class="header-user-control col-md-2">
           <span class="header-user-control-log-in">вход для клиентов</span>
           <button class="shop-cart">корзина</button>
         </div>
