@@ -1,0 +1,7 @@
+/**/node_modules/
+/.git/
+/sources/
+/**/dist/
+/**/package-lock.json
+/app/css/
+/app/js/app.min.js
