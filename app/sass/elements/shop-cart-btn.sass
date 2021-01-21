@@ -1,10 +1,10 @@
-.shop-cart
+.shop-cart-btn
   @extend .button
   position: relative
   padding-left: 64px
   padding-right: 49px
 
-.shop-cart::after
+.shop-cart-btn::after
   display: block
   content: ''
   width: 26px
@@ -17,6 +17,6 @@
   opacity: 0.4
   transition: $common-transition
 
-.shop-cart:hover, .shop-cart:active
+.shop-cart-btn:hover, .shop-cart:active
   &::after
     opacity: 1
