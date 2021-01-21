@@ -49,7 +49,7 @@ let modifyCssUrlsOptions = {
 function buildAppStyles() {
   return src(styleModules)
     .pipe(sourcemaps.init())
-    .pipe(concat('app.min.sass'))
+    .pipe(concat('styles.min.sass'))
     .pipe(sass())
     .pipe(sourcemaps.write())
     .pipe(dest('app/css/'))
@@ -58,7 +58,7 @@ function buildAppStyles() {
 
 function buildDistStyles() {
   return src(styleModules)
-    .pipe(concat('app.min.sass'))
+    .pipe(concat('styles.min.sass'))
     .pipe(sass())
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
     .pipe(cleanCSS(({ level: { 1: { specialComments: 0 } }/*, format: 'beautify'*/ })))
