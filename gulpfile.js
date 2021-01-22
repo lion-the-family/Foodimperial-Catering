@@ -5,6 +5,8 @@ const concat = require('gulp-concat');
 
 const uglify = require('gulp-uglify-es').default;
 const sourcemaps = require('gulp-sourcemaps');
+const rollup = require('gulp-rollup');
+const rename = require("gulp-rename");
 
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -69,9 +71,13 @@ function buildDistStyles() {
 // SCRIPTS
 
 function buildAppScripts() {
-  return src(['app/js/*.js', '!app/js/app.min.js'])
+  return src('app/js/*.js')
     .pipe(sourcemaps.init())
-    .pipe(concat('app.min.js'))
+    .pipe(rollup({
+      format: 'iife',
+      input: './app/js/app.js'
+    }))
+    .pipe(rename('bundle.js'))
     .pipe(sourcemaps.write())
     .pipe(dest('app/js/'))
     .pipe(browserSync.stream());
@@ -118,7 +124,7 @@ function cleanDist() {
 function startWatching() {
   watch('app/index.html', browserSync.reload);
   watch(styleModules, buildAppStyles);
-  watch(['app/js/**/*.js', '!app/js/app.min.js'], buildAppScripts);
+  watch(['app/js/**/*.js', '!app/js/bundle.js'], buildAppScripts);
 }
 
 exports.initBrowserSync = initBrowserSync;
