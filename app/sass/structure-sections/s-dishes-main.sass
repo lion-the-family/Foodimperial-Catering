@@ -1,0 +1,58 @@
+.s-dishes
+  padding-top: 60px
+
+.s-dishes-types-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+.dish-type
+  position: relative
+  color: $grey
+  text-transform: uppercase
+  font-weight: 500
+  margin-right: 22px
+  transition: $common-transition
+
+  &::after
+    display: none
+    content: ''
+    height: 2px
+    width: 100%
+    background: $yellow
+    position: absolute
+    bottom: 0
+
+.dish-type:nth-child(9)
+  margin-right: 0
+
+.dish-type.active
+  color: $black
+
+  &::after
+    display: block
+
+.dish-excluzive-type
+  @extend .dish-type
+  color: $red
+  font-weight: bold
+
+.dish-excluzive-type.active
+  color: $red
+
+  &::after
+    display: none
+
+.dish-first-excluzive-type
+  @extend .dish-excluzive-type
+  padding-left: 25px
+
+  &::before
+    position: absolute
+    content: ''
+    display: block
+    left: 0
+    top: 2px
+    width: 20px
+    height: 20px
+    background-image: url(../img/new-year-offer-icon.svg)
