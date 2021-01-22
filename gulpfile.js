@@ -69,10 +69,9 @@ function buildDistStyles() {
 // SCRIPTS
 
 function buildAppScripts() {
-  return src('app/js/*.js')
+  return src(['app/js/*.js', '!app/js/app.min.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('app.min.js'))
-    .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(dest('app/js/'))
     .pipe(browserSync.stream());
