@@ -1,0 +1,40 @@
+.s-about-us
+  position: relative
+  padding-top: 175px
+  padding-bottom: 220px
+
+  &::before, &::after
+    display: block
+    content: ''
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: contain
+    position: absolute
+
+  &::before
+    width: 324px
+    height: 585px
+    background-image: url(../img/page-background-graphics/left-composition.png)
+    left: -12px
+    top: 75px
+
+  &::after
+    width: 407px
+    height: 549px
+    background-image: url(../img/page-background-graphics/right-composition.png)
+    right: -12px
+    bottom: -25px
+
+.s-about-us-text
+  margin: 0 auto
+  margin-top: 20px
+  width: 2/3*100%
+  color: $grey
+  text-indent: 18px
+
+  strong
+    font-weight: 500
+    color: $green
+
+.s-about-us-text:first-child
+  margin-top: 40px
