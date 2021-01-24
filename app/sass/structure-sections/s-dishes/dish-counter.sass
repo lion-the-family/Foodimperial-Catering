@@ -1,0 +1,30 @@
+.dish-counter
+  font-size: 16px
+  font-weight: bold
+  display: flex
+  width: 86px
+  height: 28px
+  margin-left: 142px
+  justify-content: space-between
+  align-items: center
+  padding: 0 10px
+  padding-top: 1px
+  background-color: #F9F8FD
+  border-radius: 20px
+
+.dish-counter-btn
+  position: relative
+  padding: 0
+  background-color: transparent
+  background-repeat: no-repeat
+  background-position: center center
+  height: 12px
+  width: 12px
+
+.dish-counter-minus
+  @extend .dish-counter-btn
+  background-image: url(../img/counter-minus.svg)
+
+.dish-counter-plus
+  @extend .dish-counter-btn
+  background-image: url(../img/counter-plus.svg)
