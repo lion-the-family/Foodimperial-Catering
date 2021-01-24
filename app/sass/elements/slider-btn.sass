@@ -1,0 +1,29 @@
+.slider-btn
+  @extend .button
+  border-radius: 50%
+  width: 42px
+  height: 42px
+  background-image: linear-gradient(180deg, #FFDD4E 0%, #FFD31B 99.99%, #FFD31B 100%)
+  box-shadow: none
+  padding: 0
+
+  &::after
+    display: block
+    content: ''
+    width: 22px
+    height: 22px
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    background-image: url(../img/quote-right.svg)
+    background-position: 55% 55%
+    background-repeat: no-repeat
+    opacity: 0.4
+    transition: $common-transition
+
+.slider-btn:hover
+  box-shadow: 0px 0px 25px rgba(255, 215, 51, 0.85)
+
+  &::after
+    opacity: 1
