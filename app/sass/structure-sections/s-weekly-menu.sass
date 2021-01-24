@@ -5,8 +5,20 @@
   display: flex
   align-items: center
 
-.s-weekly-menu-title
+.s-weekly-menu-container
   position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  max-width: 1140px
+  width: 100%
+  margin: 0 auto
+
+.s-weekly-menu-title
+  position: absolute
+  left: 0
+  top: 50%
+  transform: translateY(-50%)
   font-size: 14px
   font-weight: 500
   color: $grey
@@ -29,9 +41,11 @@
   display: flex
   padding-top: 5px
   padding-bottom: 5px
+  width: 3/4*100%
+  justify-content: space-between
 
 .s-weekly-menu-item
-  flex-grow: 1
+  text-align: center
 
 .s-weekly-menu-link
   font-weight: 600
@@ -39,3 +53,17 @@
 
   &:active
     color: $dark-green
+
+@media (max-width: 992px)
+  .s-weekly-menu-title
+    display: none
+
+  .s-weekly-menu-list
+    display: flex
+    flex-wrap: wrap
+    width: 320px
+    justify-content: center
+    font-size: 12px
+
+  .s-weekly-menu-item
+    padding: 0 9px
