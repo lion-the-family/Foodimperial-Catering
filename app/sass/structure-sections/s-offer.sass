@@ -3,7 +3,10 @@
   line-height: 1.2
 
 .s-offer-banner
+  position: relative
   min-height: 260px
+  max-width: 1140px
+  margin: 0 auto
   background-image: url(../img/banner.png)
   display: flex
   justify-content: center
@@ -21,7 +24,44 @@
   bottom: 1px
 
   strong
+    position: relative
     font-size: 36px
     color: $green
     display: inline-block
     padding: 0 7px
+
+@media ( max-width: 576px)
+  .s-offer-banner
+    min-height: 340px
+    max-width: 320px
+    background-image: url(../img/banner-mobile.png)
+    background-repeat: no-repeat
+    border-radius: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    margin: 0 auto
+
+  .s-offer-banner .section-title
+    font-size: 24px
+    max-width: 180px
+
+  .s-offer-subscribe
+    margin-top: 10px
+    font-size: 16px
+    max-width: 180px
+    text-align: center
+    margin-bottom: 0
+
+  .s-offer-price
+    bottom: 0
+
+    strong
+      font-size: 28px
+      padding: 0
+      top: 1px
+
+  .s-offer-banner .long-btn
+    position: absolute
+    bottom: 20px
