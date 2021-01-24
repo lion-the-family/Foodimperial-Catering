@@ -2,8 +2,12 @@ import selectMenu from './select-menu.js';
 import countDishes from './dish-counters.js';
 
 const app = () => {
-  const dishesTypesList = document.querySelector('.s-dishes-types-list');
-  selectMenu(dishesTypesList);
+  const menuLists = [
+    document.querySelector('.s-dishes-types-list'),
+    document.querySelector('.s-payment-menu'),
+  ];
+
+  menuLists.forEach((item) => selectMenu(item));
 
   countDishes();
 };
