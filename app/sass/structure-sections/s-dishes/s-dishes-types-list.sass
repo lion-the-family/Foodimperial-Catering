@@ -8,7 +8,7 @@
   color: $grey
   text-transform: uppercase
   font-weight: 500
-  margin-right: 22px
+  margin-right: 20px
   transition: $common-transition
 
   &::after
@@ -28,6 +28,20 @@
 
   &::after
     display: block
+
+.dish-type-all
+  @extend .dish-type
+  color: $black
+  font-weight: bold
+  padding: 1px 12px
+  background: linear-gradient(180deg, #FFDD4E 0%, #FFD31B 99.99%, #FFD31B 100%)
+  border-radius: 15px
+
+.dish-type-all.active
+  color: $black
+
+  &::after
+    display: none
 
 .dish-excluzive-type
   @extend .dish-type
