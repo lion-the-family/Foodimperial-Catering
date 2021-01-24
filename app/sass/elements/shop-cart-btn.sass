@@ -15,9 +15,28 @@
   top: 50%
   transform: translateY(-50%)
   background-image: url(../img/shop-cart.png)
+  background-size: contain
   opacity: 0.4
   transition: $common-transition
 
 .shop-cart-btn:hover, .shop-cart:active
   &::after
     opacity: 1
+
+@media (max-width: 992px)
+  .shop-cart-btn
+    height: 44px
+    width: 44px
+    padding: 0
+    border-radius: 50%
+    font-size: 0
+    box-shadow: 0px 2px 0px #F2C610
+
+    &::after
+      width: 20px
+      height: 20px
+      left: 50%
+      transform: translate(-50%, -50%)
+
+    &:hover
+      box-shadow: 0px 2px 0px #F2C610

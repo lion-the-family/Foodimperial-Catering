@@ -1,0 +1,33 @@
+.site-menu-btn
+  @extend .button
+  border-radius: 50%
+  width: 44px
+  height: 44px
+  background: #F9F8FD
+  box-shadow: 0px 2px 0px #E1E1E3
+  padding: 0
+
+  &::after
+    display: block
+    content: ''
+    width: 22px
+    height: 22px
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    background-image: url(../img/mobile-hamburger.svg)
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    transition: $common-transition
+
+.site-menu-btn:hover
+  box-shadow: 0px 2px 0px #E1E1E3
+  background: #F9F8FD
+
+.site-header-container.active .site-menu-btn::after
+  background-image: url(../img/mobile-x.svg)
+
+@media (min-width: 992px)
+  .site-menu-btn
+    display: none
