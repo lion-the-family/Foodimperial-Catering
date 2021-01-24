@@ -1,6 +1,6 @@
 const selectMenu = (rootList) => {
-  rootList.addEventListener('click', (event) => {
-    const triggeredItem = event.target.closest('li');
+  rootList.addEventListener('click', (e) => {
+    const triggeredItem = e.target.closest('li');
 
     if (!triggeredItem || triggeredItem.classList.contains('active')) return;
 
