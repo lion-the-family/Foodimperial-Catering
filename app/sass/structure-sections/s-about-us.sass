@@ -23,7 +23,7 @@
     height: 549px
     background-image: url(../img/page-background-graphics/right-composition.png)
     right: -12px
-    bottom: -25px
+    top: -25px
 
 .s-about-us-text
   margin: 0 auto
@@ -38,3 +38,25 @@
 
 .s-about-us-text:first-child
   margin-top: 40px
+
+@media ( max-width: 1400px )
+  .s-about-us
+    &::before, &::after
+      display: none
+
+@media ( max-width: 992px )
+  .s-about-us-text
+    width: 100%
+    text-align: justify
+
+  .s-about-us
+    padding-top: 220px
+
+    &::before
+      display: block
+      left: 50%
+      transform: translateX(-50%)
+      top: -40px
+      background-image: url(../img/page-background-graphics/bottom-mobile.png)
+      width: 320px
+      height: 335px
