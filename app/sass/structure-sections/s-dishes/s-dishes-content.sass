@@ -5,3 +5,19 @@
   grid-gap: 60px 20px
   margin-top: 40px
   margin-bottom: 70px
+
+@media ( max-width: 1200px  )
+  .s-dishes-gallery
+    grid-template-columns: repeat(3, 1fr)
+    justify-items: center
+
+@media ( max-width: 992px )
+  .s-dishes-gallery
+    grid-template-columns: repeat(2, 1fr)
+    margin-top: 30px
+
+@media ( max-width: 768px )
+  .s-dishes-gallery
+    grid-template-columns: auto
+    grid-gap: 15px 0
+    margin-bottom: 30px

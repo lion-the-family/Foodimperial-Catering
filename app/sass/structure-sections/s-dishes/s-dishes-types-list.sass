@@ -67,3 +67,48 @@
     width: 20px
     height: 20px
     background-image: url(../img/new-year-offer-icon.svg)
+
+@media ( max-width: 992px )
+  .s-dishes-types-list
+    display: none
+    font-size: 12px
+
+  .s-dishes-container.filtered
+    .s-dishes-types-list
+      display: block
+      margin-left: 40px
+
+    .dish-type-all
+      background: none
+      padding: 0
+      color: $grey
+      font-weight: 500
+
+    .dish-type
+      padding-top: 7px
+      padding-bottom: 7px
+
+      &::after
+        display: block
+        height: 22px
+        width: 22px
+        position: absolute
+        bottom: 51%
+        transform: translateY(50%)
+        left: -35px
+        border: 1px solid #E9E9E9
+        background: #fff
+        border-radius: 50%
+
+    .dish-type.active
+      color: $grey
+
+      &::after
+        background: url(../img/check-mark.svg), linear-gradient(180deg, #FFDD4E 0%, #FFD31B 99.99%, #FFD31B 100%)
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-color: $yellow
+        border: none
+
+    .dish-excluzive-type.active
+      color: $red

@@ -1,17 +1,33 @@
-const selectMenu = (rootList) => {
-  rootList.addEventListener('click', (e) => {
-    const triggeredItem = e.target.closest('li');
+const filterMenu = () => {
+  const container = document.querySelector('.s-dishes-container');
 
-    if (!triggeredItem || triggeredItem.classList.contains('active')) return;
+  const setStartState = () => {
+    const items = document.querySelectorAll('[data-item]');
+    const wholeItem = document.querySelector('.dish-type-all');
 
-    const activeItem = rootList.querySelector('.active');
+    items.forEach((item) => item.classList.remove('active'));
+    wholeItem.classList.add('active');
+  };
 
-    if (activeItem) {
-      activeItem.classList.remove('active');
+  setStartState();
+
+  container.addEventListener('click', (e) => {
+    const [item, filtersBtn, acceptBtn, closeBtn] = [
+      '[data-item]',
+      '.filters-btn',
+      '.s-dishes-accept-btn',
+      '.s-dishes-close-btn'
+    ].map((selector) => e.target.closest(selector));
+
+    if (item) item.classList.toggle('active');
+    if (filtersBtn) container.classList.toggle('filtered');
+    if (acceptBtn) container.classList.remove('filtered');
+
+    if (closeBtn) {
+      setStartState();
+      container.classList.remove('filtered')
     }
-
-    triggeredItem.classList.add('active');
   });
 }
 
-export default selectMenu;
+export default filterMenu;
