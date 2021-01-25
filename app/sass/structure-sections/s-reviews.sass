@@ -2,19 +2,40 @@
   position: relative
   padding-top: 210px
 
+.s-reviews-container
+  position: relative
+  max-width: 1140px
+  margin: 0 auto
+
 .s-reviews-video-panel
   position: relative
+  margin: 0 auto
 
-.s-reviews-video
+.s-reviews-video-container
+  max-width: 754px
+  margin: 0 auto
+
+.s-reviews-video-wrapper
   display: block
+  position: relative
+  padding-bottom: 56.25%
+  height: 0
   margin-left: auto
   margin-right: auto
   margin-top: 60px
 
+.s-reviews-video
+  display: block
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  position: absolute
+
 .s-reviews-slider-btn
   @extend .slider-btn
   position: absolute
-  right: -35px
+  right: -20px
   top: 50%
   transform: translateY(-50%)
 
@@ -28,3 +49,10 @@
 .page-tomate
   right: -8px
   top: 20px
+
+@media ( max-width: 1200px)
+  .page-apple, .page-tomate
+    display: none
+
+  .s-reviews-slider-btn
+    right: 10px
