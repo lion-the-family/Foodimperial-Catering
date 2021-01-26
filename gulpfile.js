@@ -5,15 +5,18 @@ const concat = require('gulp-concat');
 
 const uglify = require('gulp-uglify-es').default;
 const sourcemaps = require('gulp-sourcemaps');
+
 const rollup = require('gulp-rollup');
-const rename = require("gulp-rename");
+const babel = require('rollup-plugin-babel');
 
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
 const cleanCSS = require('gulp-clean-css');
 const modifyCssUrls = require('gulp-modify-css-urls');
+
 const imageMin = require('gulp-imagemin');
+const rename = require('gulp-rename');
 
 const newer = require('gulp-newer');
 const del = require('del');
@@ -30,18 +33,23 @@ function initBrowserSync() {
 
 // STYLES
 
-let styleModules = [
+const styleModules = [
   'app/sass/config.sass',
   'app/sass/common/*.sass',
   'app/sass/elements/*.sass',
   'app/sass/structure-sections/**/*.sass'
 ];
 
-let modifyCssUrlsOptions = {
+const modifyCssUrlsOptions = {
   modify: (url, filePath) => {
     let newUrl = url;
-    let reverseCwd = '../';
-    if (url.includes('/img/')) newUrl = url.slice(reverseCwd.length);
+    const reverseCwd = '../';
+
+    if (url.includes('/img/')) {
+      let pos = url.indexOf('/img/');
+      newUrl = `..${url.slice(pos)}`;
+    }
+
     return newUrl;
   },
   prepend: '',
@@ -63,30 +71,43 @@ function buildDistStyles() {
     .pipe(concat('styles.min.sass'))
     .pipe(sass())
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-    .pipe(cleanCSS(({ level: { 1: { specialComments: 0 } }/*, format: 'beautify'*/ })))
+    // .pipe(cleanCSS(({ level: { 1: { specialComments: 0 } }/*, format: 'beautify'*/ })))
     .pipe(modifyCssUrls(modifyCssUrlsOptions))
     .pipe(dest('app/css/'));
 }
 
 // SCRIPTS
 
+const rollupOptions = {
+  allowRealFiles: true,
+  input: 'app/js/app.js',
+
+  output: {
+    format: 'iife'
+  },
+
+  plugins: [
+    babel({
+      presets: ['@babel/env']
+    })
+  ],
+};
+
 function buildAppScripts() {
-  return src('app/js/*.js')
+  return src('app/js/app.js')
     .pipe(sourcemaps.init())
-    .pipe(rollup({
-      format: 'iife',
-      input: './app/js/app.js'
-    }))
-    .pipe(rename('bundle.js'))
+    .pipe(rollup(rollupOptions))
+    .pipe(rename('scripts.min.js'))
     .pipe(sourcemaps.write())
     .pipe(dest('app/js/'))
     .pipe(browserSync.stream());
 }
 
 function buildDistScripts() {
-  return src('app/js/*.js')
-    .pipe(concat('app.min.js'))
+  return src('app/js/app.js')
+    .pipe(rollup(rollupOptions))
     .pipe(uglify())
+    .pipe(rename('scripts.min.js'))
     .pipe(dest('app/js/'))
 }
 
@@ -124,7 +145,7 @@ function cleanDist() {
 function startWatching() {
   watch('app/index.html', browserSync.reload);
   watch(styleModules, buildAppStyles);
-  watch(['app/js/**/*.js', '!app/js/bundle.js'], buildAppScripts);
+  watch(['app/js/**/*.js', '!app/js/scripts.min.js'], buildAppScripts);
 }
 
 exports.initBrowserSync = initBrowserSync;

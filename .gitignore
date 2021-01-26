@@ -4,4 +4,4 @@
 /**/dist/
 /**/package-lock.json
 /app/css/
-/app/js/bundle.js
+/app/js/scripts.min.js
