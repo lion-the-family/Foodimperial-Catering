@@ -26,9 +26,9 @@ projects until I switched to webpack.
 
 ### Technologies
 
-<img alt="html5" src="https://img.shields.io/badge/html-8C0000.svg?&style=for-the-badge&logo=html5&logoColor=fff&logoWidth=20&labelColor=AC1F21" />&nbsp;
-<img alt="css3" src="https://img.shields.io/badge/css-8C0000.svg?&style=for-the-badge&logo=css3&logoColor=fff&logoWidth=20&labelColor=AC1F21" />&nbsp;
-<img alt="sass" src="https://img.shields.io/badge/sass-8C0000.svg?&style=for-the-badge&logo=sass&logoColor=fff&logoWidth=20&labelColor=AC1F21" />&nbsp;
-<img alt="javascript" src="https://img.shields.io/badge/javascript-8C0000.svg?&style=for-the-badge&logo=javascript&logoColor=fff&logoWidth=20&labelColor=AC1F21" />&nbsp;
+<img alt="html5" src="https://img.shields.io/badge/html-e16449.svg?&style=for-the-badge&logo=html5&logoColor=fff&logoWidth=20&labelColor=f26c4f" />&nbsp;
+<img alt="css3" src="https://img.shields.io/badge/css-e16449.svg?&style=for-the-badge&logo=css3&logoColor=fff&logoWidth=20&labelColor=f26c4f" />&nbsp;
+<img alt="sass" src="https://img.shields.io/badge/sass-e16449.svg?&style=for-the-badge&logo=sass&logoColor=fff&logoWidth=20&labelColor=f26c4f" />&nbsp;
+<img alt="javascript" src="https://img.shields.io/badge/javascript-e16449.svg?&style=for-the-badge&logo=javascript&logoColor=fff&logoWidth=20&labelColor=f26c4f" />&nbsp;
 
 [foodimperial]: foodimperial-catering.com.ua
