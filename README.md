@@ -13,7 +13,7 @@ This page are the main [here][foodimperial].
 
 ### History
 
-I develop several joomla templates for this company
+I developed several joomla templates for this company
 and it's the part of my work which is related to front-end.
 
 ### Features
