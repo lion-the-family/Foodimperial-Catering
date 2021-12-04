@@ -19,7 +19,7 @@ and it's the part of my work which is related to front-end.
 ### Features
 - ⭐ The html is valid, semantic and accessible.
 - ⭐ The sass styles is incapsulated to the separate modules for better supporting.
-- ⭐ Implement adaptive design.
+- ⭐ Implement responsive design.
 - ⭐ All client logic is developed on native javascript with using ES6 and new features from ES7-ES10.
 - ⭐ The gulp build configuration is also self-made. I had been developing and improving it for similar
 projects until I switched to webpack.
