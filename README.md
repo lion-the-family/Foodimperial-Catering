@@ -13,8 +13,8 @@ This page is the main [here][foodimperial].
 
 ### History
 
-I developed several joomla templates for the same company
-and it's the part of my work which is related to front-end.
+Developed several joomla templates for the same company
+being part of my front-end related work.
 
 ### Features
 - ⭐ Valid, semantic and accessible HTML.
