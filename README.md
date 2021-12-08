@@ -8,21 +8,21 @@
 
 ### Motivation
 
-It's an example of static html website in my performance. 
-This page are the main [here][foodimperial]. 
+An example of static html website in my performance. 
+This page is the main [here][foodimperial]. 
 
 ### History
 
-I developed several joomla templates for this company
+I developed several joomla templates for the same company
 and it's the part of my work which is related to front-end.
 
 ### Features
-- ⭐ The html is valid, semantic and accessible.
-- ⭐ The sass styles is incapsulated to the separate modules for better supporting.
-- ⭐ Implement responsive design.
-- ⭐ All client logic is developed on native javascript with using ES6 and new features from ES7-ES10.
-- ⭐ The gulp build configuration is also self-made. I had been developing and improving it for similar
-projects until I switched to webpack.
+- ⭐ Valid, semantic and accessible HTML.
+- ⭐ Incapsulated to separate modules for better support SASS.
+- ⭐ Implement a responsive design.
+- ⭐ All client logic developed on native javascript by using ES6 and ES7-ES10 features.
+- ⭐ Also the gulp build configuration self-made. Developing and improving it for similar
+projects until switching to webpack.
 
 ### Technologies
 
